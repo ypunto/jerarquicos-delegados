@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Add to Home">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="theme-color" content="#477ec0">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="msapplication-tap-highlight" content="no">	
+  <title>Delegados Web App</title>
+  <link href="../fonts/css/fontawesome-all.min.css" rel="stylesheet" >
+  <link rel="manifest" href="../manifest.json">
+  <link rel="stylesheet" href="../fw/css/fw.min.css">
+  <link rel="stylesheet" href="../css/main.css"> 
+
+<style>  	 
+body {border:0; margin:0;padding: 0;}
+	 
+.image {
+	width: 100%!important;
+	height: 100%;
+	margin-top: 0px;
+	margin-bottom: 0px!important;
+	display: block;
+	position: relative!important;
+	overflow-y: scroll!important;
+	border: 0;
+	margin:0;
+	padding: 0;
+}
+	 
+	 ::-webkit-scrollbar {
+    display: none;
+}
+	
+#image  {
+    display: none;
+}	
+	
+
+#image01  {
+    display: none;
+}
+	
+#image02  {
+    display: none;
+}
+	 
+
+     
+.image-show  {
+    display:block!important;
+	width: 720px!important;
+	height:1035px;
+	margin:0!important;
+	padding: 0!important;
+}
+	
+	
+	
+.images-show  {
+    display:block!important;
+}
+    
+    .show  {
+    display:block!important;
+}    
+	
+	
+	 
+    .none  {
+        display: none !important;
+    }
+ 
+
+	 #text-list {
+		 position:absolute;
+		 top:165px;
+		 left:10px;
+	} 
+	
+	
+	 .text {
+		 font-size: 20px;
+		 display: block!important;
+		 text-decoration: none;
+	}
+	
+	
+	a.listado-main {
+		width:100%!important;
+		height:auto!important;
+		display: inline-block!important;
+		padding-bottom: 8px;
+		padding-top: 8px;
+		padding-left: 5px!important;
+		padding-right: 5px!important;
+		color: #000000!important;
+		text-decoration: none!important;
+	}
+	
+	
+	.line {
+		border-bottom: 1px solid #BCBCBC!important;
+        width: 100%!important;
+
+	}
+	
+	label.listado-main  {
+		width:auto!important;
+		height:auto!important;
+		display: inline-block!important;
+	}
+	
+	
+	.listado-block {
+		float:left!important;
+		padding: 6px!important;
+        list-style:disc!important;
+        list-style-type: disc!important;
+	}
+
+	.listado-main li {
+		display: block;
+		margin-top: 9px;
+		margin-bottom: 13px;
+		font-size:12px; 
+		line-height: 18px;
+		font-weight: normal;
+		margin-left: 5px!important;
+		margin-right: 20px!important;
+        text-align: left;
+        text-transform:inherit;
+        text-indent: inherit;
+        list-style:none!important;
+        list-style-type: none!important;
+	} 
+	
+	
+	.listado-main_break {
+		display: block;
+		height: 52px;
+		width: 100%;	
+	} 
+
+	.icono {
+		width:29px!important;
+		padding: 12px!important;
+		height:29px!important;
+		float:left!important;
+		border-radius: 50%!important;
+		margin-right: 15px!important;
+		border: 2px solid #477ec0!important;
+	}
+	
+	
+	.icono-after {
+		border: 2px solid #4DAC25!important;
+		background-color: #4DAC25!important;
+	}
+	
+	.icon-checkbox:after{top:4px!important;left:4px!important}
+
+	
+	
+	.input {
+		height: 100%!important;
+	}
+
+    .text-list-print {
+		 top:180px!important;
+	} 
+	
+	.list-print  {
+		margin-top: 10px!important;
+		margin-bottom: 10px!important;
+        padding-bottom: 12px!important;
+		padding-top: 12px!important;
+        line-height: 20px!important;
+        font-size:12px!important; 
+        list-style:none;
+        list-style-type: none;
+        list-style-position: outside!important;
+        display: block;
+	} 
+
+    
+    #button { 
+        display: none;
+    }
+	
+	.listo-page {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		z-index: 10000;
+		padding-top: 80px!important;
+		top:0px;
+		left: 0px;
+		background: #003358!important;
+		background-color: #003358!important;
+		
+	}
+	
+	
+	.page-title-big {color: #d3d500; font-size: 50px; font-weight: 700; text-align: center;margin: auto; margin-top: 20px!important}
+
+.page-title-small {color: #fff; font-size: 20px; font-weight: 500; text-align: center;margin: auto; margin-top: 8px!important}
+	
+.hr-class {
+	border: 0;
+	border-bottom: solid 13px #d3d500;
+	width: 37%;
+	margin-top: 0.03em;
+	margin-right: auto;
+	margin-bottom: 1em;
+	margin-left: auto;
+	border-radius: 7px 7px 7px 7px;
+	}
+ 
+	
+	
+.button-margin-pdf {
+	margin-top: 40px!important;
+	font-size: 17px!important;
+	margin-left: 25px!important;
+	width:88%!important;
+	
+}
+
+ </style>
+</head>
+   
+    
+<body>
+<div id="app">
+
+ <div class="page" data-name="iframe_doc_asalariado">
+
+		  <div id="button" class="fab fab-right-top color-yellow fab-buttons-zoom">
+			<a class="buttono" onClick="remover()"><i class="icon fas fa-check"></i><i class="icon fas fa-times"></i></a> 
+			  <div class="fab-buttons fab-buttons-zoom2 fab-buttons-left">
+			  <a href="#" onClick="printo()"><i class="icon fas fa-print"></i></a>
+			  <a href="#" onClick="HTMLtoPDF()"><i class="icon fas fa-download"></i></a>
+			</div>
+		  </div>	
+
+		<div class="image" id="HTMLtoPDF">
+			
+			
+		<div class="block block-strong body-block section-block">
+            <h1 class="page-title section-font">Documentación a Presentar<br><span>Seleccione la documentación requerida:</span></h1>
+        </div>
+			<img id="image" class="images" src="../img/doc/pdf_doc-presentar.jpg" width="708" heigth="1035" alt="header">
+			<img id="image01" src="../img/doc/header_doc-presentar.jpg" width="488" heigth="225" alt="header">
+			
+	
+			
+			<div id="text-list">
+                    <a class="listado-main line"><label class="item-checkbox item-content">		  		  
+                            <li class="listado-block text" onclick="addClass(this)">
+                            <input class="input" type="checkbox" name="demo-checkbox" />
+                                <i class="icon icon-checkbox icono"></i>
+                                Solicitud de Ingreso a la Mutual, completa y firmada por Original.
+                                </li>
+                    </label></a>
+
+                    <a class="listado-main line"><label class="item-checkbox item-content">		  		  
+                            <li class="listado-block text" onclick="addClass(this)">
+                            <input class="input" type="checkbox" name="demo-checkbox"/>
+                                <i class="icon icon-checkbox icono"></i>
+                               Contrato de Servicio de Salud y Anexo de Cobertura, completo y firmado.
+                                </li>
+                    </label></a>
+
+                    <a class="listado-main line "><label class="item-checkbox item-content">		  		  
+                            <li class="listado-block text" onclick="addClass(this)">
+                            <input class="input" type="checkbox" name="demo-checkbox"/>
+                                <i class="icon icon-checkbox icono"></i>
+                                Fotocopia de Documento de Identidad del Titular y Adherentes (frente y dorso).
+                                </li>
+                    </label></a>
+
+                    <a class="listado-main line"><label class="item-checkbox item-content">		  		  
+                            <li class="listado-block text" onclick="addClass(this)">
+                            <input class="input" type="checkbox" name="demo-checkbox"/>
+                                <i class="icon icon-checkbox icono"></i>
+                                Constancia de CUIL extendida por el ANSES (de Titular y Adherentes).
+                                </li>
+                    </label></a>
+
+                    <a class="listado-main line"><label class="item-checkbox item-content">		  		  
+                            <li class="listado-block text" onclick="addClass(this)">
+                            <input class="input" type="checkbox" name="demo-checkbox"/>
+                                <i class="icon icon-checkbox icono"></i>
+                                En caso de matrimonio: Fotocopia de Certificado de Matrimonio o Libreta de Casamiento.
+                                </li>
+                    </label></a>
+
+                    <a class="listado-main line"><label class="item-checkbox item-content">		  		  
+                            <li class="listado-block text" onclick="addClass(this)">
+                            <input class="input" type="checkbox" name="demo-checkbox"/>
+                                <i class="icon icon-checkbox icono"></i>
+                               En caso de concubinato: Unión Convivencial extendida por Registro Civil o certificado de convivencia extendido por policía, Escribano, Juez de Paz o Tribunales.
+                                </li>
+                    </label></a>
+
+
+                    <a class="listado-main line"><label class="item-checkbox item-content">		  		  
+                            <li class="listado-block text" onclick="addClass(this)">
+                            <input class="input" type="checkbox" name="demo-checkbox"/>
+                                <i class="icon icon-checkbox icono"></i>
+                                En caso de embarazo: certificado de Embarazo, informe de la última ecografía realizada.
+                                </li>
+                    </label></a>
+
+                    <a class="listado-main line"><label class="item-checkbox item-content">		  		  
+                            <li class="listado-block text" onclick="addClass(this)">
+                            <input class="input" type="checkbox" name="demo-checkbox"/>
+                                <i class="icon icon-checkbox icono"></i>
+                                Para el ingreso de hijos menores de 1 año de edad: presentar ficha médica pediátrica, completa por Médico Pediatra y firmada por el titular.
+                                </li>
+                    </label></a>
+
+
+                    <a class="listado-main line"><label class="item-checkbox item-content">		  		  
+                            <li class="listado-block text" onclick="addClass(this)">
+                            <input class="input" type="checkbox" name="demo-checkbox"/>
+                                <i class="icon icon-checkbox icono"></i>
+                                En caso de hijos: fotocopia de Partida de Nacimiento de cada uno de los ellos.
+                                </li>
+                    </label></a>
+
+
+                    <a class="listado-main line"><label class="item-checkbox item-content">		  		  
+                            <li class="listado-block text" onclick="addClass(this)">
+                            <input class="input" type="checkbox" name="demo-checkbox"/>
+                                <i class="icon icon-checkbox icono"></i>
+                                Para hijos mayores de 21 años: certificado de Estudio y Certificación de ANSES donde conste que no trabajan en relación de dependencia.
+                                </li>
+                    </label></a>
+
+                    <a class="listado-main line"><label class="item-checkbox item-content">		  		  
+                            <li class="listado-block text" onclick="addClass(this)">
+                            <input class="input" type="checkbox" name="demo-checkbox"/>
+                                <i class="icon icon-checkbox icono"></i>
+                                Formulario UIF (Unidad de Información Financiera) completo y firmado.
+                                </li>
+                    </label></a>
+
+
+                    <a class="listado-main line"><label class="item-checkbox item-content">		  		  
+                            <li class="listado-block text" onclick="addClass(this)">
+                            <input class="input" type="checkbox" name="demo-checkbox"/>
+                                <i class="icon icon-checkbox icono"></i>
+                                Fotocopia de los tres últimos recibos de sueldo en caso de Asalariados.
+                                </li>
+                    </label></a>
+
+                    <a class="listado-main line"><label class="item-checkbox item-content">		  		  
+                            <li class="listado-block text" onclick="addClass(this)">
+                            <input class="input" type="checkbox" name="demo-checkbox"/>
+                                <i class="icon icon-checkbox icono"></i>
+                                Copia de Credencial de Monotributo (Form. 152) y Formulario 184/F.
+                                </li>
+                    </label></a>
+
+
+                    <a class="listado-main line"><label class="item-checkbox item-content">		  		  
+                            <li class="listado-block text" onclick="addClass(this)">
+                            <input class="input" type="checkbox" name="demo-checkbox"/>
+                                <i class="icon icon-checkbox icono"></i>
+                                Fotocopia de los 3 últimos comprobantes de pago del Monotributo incluyendo el grupo familiar completo.
+                                </li>
+                    </label></a>
+
+			  <div class="listado-main_break"></div>
+
+				</div>
+			<img id="image02" src="../img/doc/footer_doc-presentar.png" width="488"  alt="footer">
+		</div>	
+     
+</div>		  
+</div>
+		
+
+	
+	
+	
+	
+<script>
+
+	function reload(){
+            location.reload();
+     }
+
+	function noButton(){
+            var input = document.getElementsByTagName("input");
+            var gButton = document.getElementById("button");
+            var i;
+                for (i = 0; i < input.length; i++) { 
+                    var x = input[i].hasAttribute("checked");
+                        if (x == true) {
+                        gButton.classList.add("show");
+                        return;
+                        } else {
+                        gButton.classList.remove("show");
+						
+                        }
+                }
+     }
+	
+
+	function addClass(y) {	
+        var x = y.getElementsByTagName("input")[0];
+		x[x.getAttribute("checked", "checked")?'removeAttribute':'setAttribute']("checked", "checked");
+		y.classList.toggle("text");	
+        noButton();
+	}
+
+	function printo() { 
+		var img = document.getElementById("image");
+		img.classList.add("image-show");
+		document.getElementById("text-list").classList.add("text-list-print");
+        
+		var x = document.getElementById("text-list");
+        var z = x.getElementsByClassName("listado-main");
+        var ul = document.createElement("ul");
+                x.appendChild(ul);
+        var i;
+            for (i = 0; i < z.length; i++) { 
+                
+                    var wow = z[i].innerHTML;
+                    var li = document.createElement("li");  
+                    li.className = "list-print";
+                    li.innerHTML = wow;
+                    ul.appendChild(li);                   
+            }
+        $("li").each(function() {
+
+           var erase = $(this).text();
+            if (erase == ""){
+                this.remove();
+            }
+        });    
+        
+        $(":input").remove(".input");
+        $(".block").addClass("none");
+        $("a").removeClass("line");
+        $("i").removeClass("icono");
+		$("i").removeClass("icono-after");
+        $("i").removeClass("icon-checkbox");
+		$("#button").remove();
+        $(".listado-main").remove();
+		window.print();
+		
+		var btn = document.createElement("div");
+		btn.classList.add("listo-page");
+		var hr = document.createElement("hr");
+		hr.classList.add("hr-class");
+		var button = document.createElement("button");
+		button.className = 'button button-fill button-round button-margin-pdf';
+		button.innerHTML = 'Crear otro Documento';
+		button.setAttribute("onclick", "reload()"); 
+		var h1 = document.createElement("h1");
+		h1.className = 'page-title-big';
+		h1.innerHTML = 'Listo!';
+		var h2 = document.createElement("h2");
+		h2.className = 'page-title-small';
+		h2.innerHTML = 'Se ha generado el archivo<br>para imrprimir.';
+		btn.appendChild(h1);
+		btn.appendChild(hr);
+		btn.appendChild(h2);
+		btn.appendChild(button);
+		document.body.appendChild(btn);
+	}
+
+	function remover() {
+        $(".listado-main").each(function() {
+           var erase = $(this).find(":input").attr("checked");
+            if (erase != "checked"){
+                this.remove();
+            }
+        });
+		
+		$(".listado-main i").addClass("icono-after");
+		var button = document.getElementsByClassName("buttono")[0];
+		button.setAttribute("onclick", "remover()"); 
+		button.setAttribute("onclick", "reload()"); 
+}
+
+</script>
+	<script src="../js/jquery-2.1.3.js"></script>
+	<script src="../fw/js/fw.min.js"></script>
+	<script src="../js/routes.js"></script>
+	<script src="../js/app.js"></script>   
+	<script src="../js/print.min.js"></script>
+	<script src="../js/jspdf.js"></script>
+	<script src="../js/pdfFromHTML.js"></script>
+</body>
+
+</html>

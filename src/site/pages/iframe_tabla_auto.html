@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Add to Home">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="theme-color" content="#477ec0">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="msapplication-tap-highlight" content="no">	
+    
+
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Last-Modified" content="0">
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+    
+  	<meta property="og:title" content="Delegados Web App">
+	<meta property="og:description" content="Jerárquicos Salud">
+	<meta property="og:url" content="http://www.jerarquicos.com/delegados/index.html">
+	<meta property="og:type" content="webapp">
+	<meta property="og:image" content="http://www.jerarquicos.com/delegados/img/icon.jpg">
+	<meta property="og:site_name" content="Delegados Web App">
+	<meta property="og:image:type" content="image/jpeg">
+    	
+	
+  <title>Delegados Web App</title>
+	
+
+  <link href="../fonts/css/fontawesome-all.min.css" rel="stylesheet" >
+  <link rel="manifest" href="../manifest.json">
+  <link rel="stylesheet" href="../fw/css/fw.min.css">
+  <link rel="stylesheet" href="../css/main.css"> 
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>
+		function zoomin(){
+        var myImg = document.getElementById("image");
+        var currWidth = myImg.clientWidth;
+        myImg.style.width = (currWidth + 100) + "px";
+    }
+    function zoomout(){
+        var myImg = document.getElementById("image");
+        var currWidth = myImg.clientWidth;
+        if(currWidth == 100) return false;
+		 else{
+         myImg.style.width = (currWidth - 100) + "px";
+        }
+    }
+</script>
+ <style>   
+.list_images {width:100%!important;
+    height:100%;margin-top:56px;
+    margin-bottom:110px!important;display:block;
+    position: relative!important;
+    overflow-y:scroll!important;border:0;}
+     
+.list_images img {
+    display:block;
+    margin-bottom:210px!important;}
+</style>
+</head>
+    
+    
+    
+    
+    
+    
+<body>
+  <div id="app">
+      
+
+          
+<!--------------------------------------------------->
+ <div class="page" data-name="tabla_auto">
+	
+ 
+ 
+
+  <div class="fab fab-right-top color-yellow fab-buttons-zoom">
+    <a href="#"><i class="icon fas fa-search"></i><i class="icon fas fa-search-plus"></i></a> 
+	  <div class="fab-buttons fab-buttons-zoom2 fab-buttons-left">
+      <a href="#" onClick="zoomin()"><i class="icon fas fa-plus"></i></a>
+	  <a href="#" onClick="zoomout()"><i class="icon fas fa-minus"></i></a>
+    </div>
+  </div>
+	  
+ 	  
+ 
+
+
+<div class="list_images">
+	<img id="image" src="http://www.jerarquicos.com/delegados/img/tablas/tabla_autonomo.jpg"  width="360" alt="tabla-autonomo">
+</div>
+
+   
+</div>	
+<!--------------------------------------------------->
+  
+ 
+   </div>
+
+  <script src="../fw/js/fw.min.js"></script>
+  <script src="../js/routes.js"></script>
+  <script src="../js/app.js"></script>   
+<script src="../js/print.min.js"></script>
+
+
+</body>
+
+</html>

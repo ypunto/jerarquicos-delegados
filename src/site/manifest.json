@@ -1,0 +1,46 @@
+// JSON Document
+
+
+{
+  "short_name": "Delegados",
+  "name": "Delegados Web App",
+  "icons": [
+    {
+    "src": "img/touch/icon-48.png",
+    "type": "image/png",
+    "sizes": "48x48"
+  },
+      {
+    "src": "img/touch/icon-72.png",
+    "type": "image/png",
+    "sizes": "72x72"
+  },
+    {
+      "src": "img/touch/icon-96.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+     {
+      "src": "img/touch/icon-144.png",
+      "type": "image/png",
+      "sizes": "144x144"
+    },
+    {
+      "src": "img/touch/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+	  
+	 {
+      "src": "img/touch/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+    
+  "theme_color": "#477ec0",
+  "background_color": "#003358",
+  "display": "standalone",
+  "orientation": "portrait",
+  "start_url": "index.html?launcher=true"
+}
