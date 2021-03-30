@@ -53,11 +53,7 @@ border-bottom: none!important;
     margin-left: 35px;
 }
 
-.card{
 
-margin-bottom: 1.1em!important;
-
-}
 
 .body-content {background-color: #003358;}
 
@@ -108,16 +104,46 @@ hr {
 .block-button {margin-right: 20px!important; margin-left: 20px!important}
 
 
+video::-webkit-media-controls-panel {
+    display: flex !important;
+    opacity: 1 !important;
+}
 
+video[controls]::-webkit-media-controls-panel {
+    display: flex !important;
+    opacity: 1 !important;
+}
 
 .body-card{
-background-color:#E1E1E1!important;
+background-color:#E1E1E1;
     margin-top: 2%;
 padding-bottom: 1em;
 padding-right: 0.4em;
 padding-left: 0.4em;
     background: #E1E1E1; 
     background: linear-gradient(to bottom, #003358 4%, #E1E1E1 4%); 
+}
+
+.body-video{	
+	background-color:#E1E1E1!important;
+	background: #E1E1E1!important;
+}
+
+
+.card{
+margin-bottom: 1.1em!important;
+
+}
+
+.card-video{
+	background-color: transparent!important;
+	box-shadow: 0 0px 0px rgba(0,0,0,0), 0 1px 2px rgba(0,0,0,0)!important;
+}
+
+.card-video-header{
+	color:#477ec0;
+	font-weight: 600;
+	font-size:1.2em!important;
 }
 
 
@@ -177,7 +203,7 @@ delay{
 .md .tabbar-labels.toolbar-bottom-md {height: 56px!important;}
 
 
-.download::before, .share::before,.publi::before, .manual::before,.folle::before,.app::before, .whatsapp::before, .email::before, .printo::before, .case::before {
+.download::before, .share::before,.publi::before, .video::before, .manual::before,.folle::before,.app::before, .whatsapp::before, .email::before, .printo::before, .case::before, .book::before {
   display: inline-block;
   font-style: normal;
   font-variant: normal;
@@ -191,12 +217,20 @@ delay{
     font-family: "Font Awesome 5 Free";  content: "\f15c"; color: #17b9e8;font-size: 18px;
   }
 
+.book::before {
+    font-family: "Font Awesome 5 Free";  content: "\f1ea"; color: #17b9e8;font-size: 18px;
+  }
+
 .case::before {
     font-family: "Font Awesome 5 Free";  content: "\f2c1"; color: #17b9e8;font-size: 18px;
   }
 
 .publi::before {
     font-family: "Font Awesome 5 Free";  content: "\f005"; color: #17b9e8;font-size: 17px;
+  }
+
+.video::before {
+    font-family: "Font Awesome 5 Free";  content: "\f144"; color: #17b9e8;font-size: 17px;
   }
 
 .folle::before {
@@ -331,5 +365,30 @@ a span.button-big-text {color:#003358!important;font-weight: 700!important;font-
 
 
 a span.button-fill-text {color:#003358!important;font-weight: 600!important;font-size: 17px!important;text-transform: none; display:block;line-height: 65px!important}
+
+
+
+@media screen and (max-width: 1024px) {
+	.video-breakpoint{
+	 width: 720px!important;
+	height: 406px!important;
+	}
+	
+}
+
+@media screen and (max-width: 476px) {
+	.video-breakpoint{
+	 width: 330px!important;
+	height: 200px!important;
+	}
+}
+@media screen and (max-width: 320px) {
+	.video-breakpoint{
+	 width: 290px!important;
+	height: 170px!important;
+	}
+	
+}
+
 
 
